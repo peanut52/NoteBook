@@ -4,8 +4,6 @@ import datetime
 import markdown
 from python_markdown_maker import *
 
-# from markdown import *
-
 current_day = datetime.date.today()
 current_year_and_month = str(current_day.year) + str(current_day.month)
 
@@ -21,8 +19,12 @@ def create_everyday_md_file(path):
         with open(today_file, 'w', encoding='utf-8') as f:
             f.write(f'# TODAY IS {datetime.date.today()}, COME ON!')
             f.write(f'\n')
+            f.write(f'--------------------------------------------')
+            f.write(f'\n')
             f.write(f'## 今天遇到的问题是：')
-
+            f.write(f'\n')
+            f.write(f'--------------------------------------------')
+            f.write(f'\n')
             content = f"""
 ```\n
 \n
@@ -30,10 +32,12 @@ def create_everyday_md_file(path):
 ```
 """
             f.write(content)
-            f.write(f'\n')
+            # f.write(f'\n')
 
             f.write(f'## 今天问题的解决方案是：')
-
+            f.write(f'\n')
+            f.write(f'--------------------------------------------')
+            f.write(f'\n')
             method = f"""
 ```\n
 \n
@@ -41,15 +45,22 @@ def create_everyday_md_file(path):
 ```
 """
             f.write(method)
-            f.write(f'\n')
-            f.write(f'感悟之灵光一现：')
-            inspiration = f"""
-```\n
-\n
-\n
-```
-"""
-            f.write(inspiration)
+#             f.write(f'\n')
+#             f.write(f'--------------------------------------------')
+#             f.write(f'\n')
+            # f.write(f'## 感悟之灵光一现：')
+            # f.write(f'\n')
+            # f.write(f'--------------------------------------------')
+            # f.write(f'\n')
+
+
+#             inspiration = f"""
+# ```\n
+# \n
+# \n
+# ```
+# """
+#             f.write(inspiration)
 
 if __name__ == '__main__':
     my_path = r"D:\MyNote"
