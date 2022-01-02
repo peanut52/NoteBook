@@ -1,3 +1,2 @@
-
 cd %~dp0
-python3 ..\create_file.py
+python ..\create_file.py
