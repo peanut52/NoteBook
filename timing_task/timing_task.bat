@@ -1,2 +1,2 @@
-cd D:\pycharm_project\notebook_record_everyday\timing_task
+cd %~dp0
 python3 ..\create_file.py
